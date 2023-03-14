@@ -25,4 +25,12 @@ return [
     'log_write'    => [],
     // 应用结束
     'app_end'      => [],
+    /* 自定义钩子与行为的绑定 */
+    'index_start'=> [
+        \app\index\behavior\IndexStart::class,
+        //'_overlay' => true
+    ],
+    'index_end'=> [
+        \app\index\behavior\IndexEnd::class,
+    ]
 ];
