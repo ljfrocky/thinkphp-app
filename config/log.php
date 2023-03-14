@@ -27,4 +27,6 @@ return [
     'max_files'   => 0,
     // 是否关闭日志写入
     'close'       => false,
+    // 是否记录调用栈trace
+    //'record_trace' => true,
 ];
