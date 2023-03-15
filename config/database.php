@@ -60,4 +60,32 @@ return [
     'break_reconnect' => false,
     // 断线标识字符串
     'break_match_str' => [],
+    'db_config_1' => [
+        // 数据库类型
+        'type'        => Env::get('DB1_TYPE'),
+        // 服务器地址
+        'hostname'    => Env::get('DB1_HOST'),
+        // 数据库名
+        'database'    => Env::get('DB1_NAME'),
+        // 数据库用户名
+        'username'    => Env::get('DB1_USERNAME'),
+        // 数据库密码
+        'password'    => Env::get('DB1_PASSWORD'),
+        // 数据库编码默认采用utf8
+        'charset'     => 'utf8',
+    ],
+    'db_config_2' => [
+        // 数据库类型
+        'type'        => Env::get('DB1_TYPE'),
+        // 服务器地址
+        'hostname'    => Env::get('DB1_HOST'),
+        // 数据库名
+        'database'    => Env::get('DB2_NAME'),
+        // 数据库用户名
+        'username'    => Env::get('DB1_USERNAME'),
+        // 数据库密码
+        'password'    => Env::get('DB1_PASSWORD'),
+        // 数据库编码默认采用utf8
+        'charset'     => 'utf8',
+    ],
 ];
