@@ -1,6 +1,8 @@
 <?php
 namespace app\index\controller;
 
+use app\common\model\Article;
+use app\common\model\User;
 use think\facade\Hook;
 use think\facade\Log;
 
@@ -18,8 +20,15 @@ class Index extends Base
         return "正文内容";
     }
 
-    public function hello($name = 'ThinkPHP5')
+    public function db()
     {
-        return 'hello,' . $name;
+        $res1 = User::where('id', '>', 0)
+            ->append(['gender_text', 'add_time_text'])
+            ->select();
+        var_dump($res1->toArray());
+
+        $res2 = Article::where('id', '>', 5)->select();
+        var_dump($res2->toArray());
+        return '';
     }
 }
