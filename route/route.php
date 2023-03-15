@@ -9,11 +9,14 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-Route::get('think', function () {
+/*Route::get('think', function () {
     return 'hello,ThinkPHP5!';
-});
+});*/
 
-Route::get('db', 'index/db');
+use think\facade\Route;
+
+Route::get('', 'index/index')->middleware('group_noauth');
+Route::get('db', 'index/db')->middleware('group_auth');
 
 return [
 

@@ -5,10 +5,11 @@ use app\common\model\Article;
 use app\common\model\User;
 use think\facade\Hook;
 use think\facade\Log;
+use think\Request;
 
 class Index extends Base
 {
-    public function index()
+    public function index(Request $request)
     {
         Log::debug('这是输出到trace工具调试tab的信息');
         Hook::add('index_start',function() {
@@ -17,6 +18,8 @@ class Index extends Base
 
         Hook::listen('index_start', ['a']);
         Hook::listen('index_end', ['b']);
+
+        var_dump("Request ID：{$request->reqid}");
         return "正文内容";
     }
 
